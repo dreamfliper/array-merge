@@ -9,7 +9,7 @@ articles.merge(authors, (article, author) => ({...article, ...author}) )
 
 // if you only need some of the properties
 
-articles.merge(authors, ({id}, {name})=>({id, name}))
+articles.merge(authors, ({id}, {name}) => ({id, name}))
 ```
 
 ## Motivation
@@ -71,6 +71,6 @@ let temp = MergeArrays(
     array.map(x=>x.value).filter(x=>x>50), 
     array2,
     (x,y) => x*y )
-temp.reduce((acc, ele)=> acc + ele, 0)
+temp.reduce((acc, ele) => acc + ele, 0)
 ```
 
