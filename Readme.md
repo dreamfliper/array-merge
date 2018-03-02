@@ -25,7 +25,7 @@ In Function Programming, it's common to use array as data stream for piping func
     title:'Learning Chinese',
     id:'35'
   }
-].map(x=>x.title).map(x=>console.log(x))
+].map(x => x.title).map(x => console.log(x))
 
 ```
 
@@ -48,7 +48,7 @@ let authors = [
 
 //let's assume these data has sorted by back-end, all we need is to mix these two array by order
 
-articles.reduce((accumulator, element, index)=>{
+articles.reduce((accumulator, element, index) => {
     accumulator[index].name = authors[index].name
     return accumulator
 }, authors)
