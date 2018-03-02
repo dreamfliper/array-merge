@@ -18,13 +18,13 @@ In Function Programming, it's common to use array as data stream for piping func
 
 ```js
 [
-    {
-		title:'There is nothing',
-        id:'24'
-    },{
-		title:'Learning Chinese',
-        id:'35'
-    }
+  {
+    title:'There is nothing',
+    id:'24'
+  },{
+    title:'Learning Chinese',
+    id:'35'
+  }
 ].map(x=>x.title).map(x=>console.log(x))
 
 ```
@@ -33,17 +33,17 @@ In native javascript array prototype, there is no something like mixing two arra
 
 ```js
 let articles = [
-    {
-        titile:'There is nothing',
-        id:'24'
-    },
-    ...
+  {
+    titile:'There is nothing',
+    id:'24'
+  },
+  ...
 ];
 let authors = [
-    {
-    	name:'Tom'
-    },
-    ...
+  {
+    name:'Tom'
+  },
+  ...
 ];
 
 //let's assume these data has sorted by back-end, all we need is to mix these two array by order
