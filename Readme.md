@@ -54,7 +54,7 @@ articles.reduce((accumulator, element, index) => {
 }, authors)
 ```
 
-In this case, code doesn't look like FP, specially when it involved `index`.  You can also archieve this by using `map` or `for... of`. In my imagenation, a proper syntax would be like `array1.merge(array2, callbackHandler)`.
+In this case, code doesn't look like FP, especially when it involves `index`.  You can also archieve this by using `map` or `for... of`. In my imagenation, a proper syntax would be like `array1.merge(array2, callbackHandler)`.
 
 The matter of injecting as a prototype function instead of normal function is this won't break array-function piping. For example:
 
