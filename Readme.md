@@ -19,10 +19,10 @@ In Function Programming, it's common to use array as data stream for piping func
 ```js
 [
     {
-        title:'There is nothing',
+		title:'There is nothing',
         id:'24'
     },{
-    	title:'Learning Chinese',
+		title:'Learning Chinese',
         id:'35'
     }
 ].map(x=>x.title).map(x=>console.log(x))
