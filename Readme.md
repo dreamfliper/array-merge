@@ -1,15 +1,15 @@
-# Array-Merge
+# Array-Mix
 
 ## Usage
 
 Take next section's data as example:
 
 ```js
-articles.merge(authors, (article, author) => ({...article, ...author}) )
+articles.mix(authors, (article, author) => ({...article, ...author}) )
 
 // if you only need some of the properties
 
-articles.merge(authors, ({id}, {name}) => ({id, name}))
+articles.mix(authors, ({id}, {name}) => ({id, name}))
 ```
 
 ## Motivation
@@ -54,7 +54,7 @@ articles.reduce((accumulator, element, index) => {
 }, authors)
 ```
 
-In this case, code doesn't look like FP, especially when it involves `index`.  You can also archieve this by using `map` or `for... of`. In my imagenation, a proper syntax would be like `array1.merge(array2, callbackHandler)`.
+In this case, it doesn't look like FP, especially when it involves `index`.  You can also archieve this by using `map` or `for... of`. In my imagenation, a proper syntax would be like `array1.mix(array2, callbackHandler)`.
 
 The matter of injecting as a prototype function instead of normal function is this won't break array-function piping. For example:
 
@@ -62,7 +62,7 @@ The matter of injecting as a prototype function instead of normal function is th
 array
   .map(x => x.value)
   .filter(x => x > 50)
-  .merge(array2, (x, y) => x * y)
+  .mix(array2, (x, y) => x * y)
   .reduce((acc, ele) => acc + ele ,0)
 
 //rather than
