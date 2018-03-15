@@ -26,11 +26,11 @@ test("array-mix", t => {
 })
 
 test("array-mix-many", t => {
-	const argu1 = (a, c, g) => a + c + g,
+	const argu1 = (a, c, g) => a - c + g,
 		argu2 = [3, 4, 5],
 		argu3 = [3, 6, 7],
 		argu4 = [2, 3, 7]
-	t.deepEqual(argu2.mix(argu1, argu3, argu4), [8, 13, 19])
+	t.deepEqual(argu2.mix(argu1, argu3, argu4), [2, 1, 5])
 	t.deepEqual(argu2, [3, 4, 5])
 	t.deepEqual(argu3, [3, 6, 7])
 	t.deepEqual(argu4, [2, 3, 7])
