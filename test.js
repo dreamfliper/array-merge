@@ -1,11 +1,11 @@
 import test from "ava"
 import currify from "./currify"
-import "./index"
+import "."
 import "./arrayDiff"
 
 test("currify iteration old way", t => {
 	let args = []
-	const old_argument = [2, 3, 5],
+	const old_argument = [2, 3, 5]
 	const new_argument = [3, 2, 7, 3, 6]
 	for (let i = 0, l = new_argument.length; i < l; i++)
 		args[args.length] = new_argument[i]
