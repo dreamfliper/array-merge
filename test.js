@@ -36,8 +36,10 @@ test("array-mix-many", t => {
 	t.deepEqual(argu4, [2, 3, 7])
 })
 
-test('array-diff', t => {
-	const arr1 = [1,2,6,7],
-		arr2 = [6,7,8,9]
+test("array-diff", t => {
+	const arr1 = [1, 2, 6, 7],
+		arr2 = [6, 7, 8, 9]
 	t.deepEqual(arr1.diff(arr2), [1, 2])
-});
+	t.deepEqual(arr1, [1, 2, 6, 7])
+	t.deepEqual(arr2, [6, 7, 8, 9])
+})
