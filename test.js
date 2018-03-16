@@ -2,6 +2,7 @@ import test from "ava"
 import currify from "./currify"
 import "."
 import "./arrayDiff"
+import "./arrayPartition"
 
 test("currify iteration old way", t => {
 	let args = []
@@ -42,4 +43,12 @@ test("array-diff", t => {
 	t.deepEqual(arr1.diff(arr2), [1, 2])
 	t.deepEqual(arr1, [1, 2, 6, 7])
 	t.deepEqual(arr2, [6, 7, 8, 9])
+})
+
+test("array-partition", t => {
+	const array = [2, 3, 4, 5, 6]
+	const [even, odd] = array.partition(x => x % 2 === 0)
+	t.deepEqual(even, [2, 4, 6])
+	t.deepEqual(odd, [3, 5])
+	t.deepEqual(array, [2, 3, 4, 5, 6])
 })
