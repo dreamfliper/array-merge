@@ -27,14 +27,14 @@ test("array-mix", t => {
 })
 
 test("array-mix-many", t => {
-	const argu1 = (a, c, g) => a - c + g
-	const argu2 = [3, 4, 5]
-	const argu3 = [3, 6, 7]
-	const argu4 = [2, 3, 7]
-	t.deepEqual(argu2.mix(argu1, argu3, argu4), [2, 1, 5])
-	t.deepEqual(argu2, [3, 4, 5])
-	t.deepEqual(argu3, [3, 6, 7])
-	t.deepEqual(argu4, [2, 3, 7])
+	const callBack = (a, c, g) => a - c + g
+	const array1 = [3, 4, 5]
+	const array2 = [3, 6, 7]
+	const array3 = [2, 3, 7]
+	t.deepEqual(array1.mix(callBack, array2, array3), [2, 1, 5])
+	t.deepEqual(array1, [3, 4, 5])
+	t.deepEqual(array2, [3, 6, 7])
+	t.deepEqual(array3, [2, 3, 7])
 })
 
 test("array-diff", t => {
