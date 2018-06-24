@@ -29,7 +29,7 @@ let publishers = [
 
 // let's assume these data has sorted by back-end, all we need is to mix these two array by order
 
-articles.mix((article, author) => ({...article, ...author}) ,authors)
+articles.mix((article, author) => ({ ...article, ...author }), authors)
 
 ```
 
@@ -39,14 +39,17 @@ In Function Programming, it's common to use array as data stream for piping func
 
 ```js
 [
-  {
-    title: 'There is nothing',
-    id: '24'
-  },{
-    title: 'Learning Chinese',
-    id: '35'
-  }
-].map(x => x.title).map(x => console.log(x))
+	{
+		title: 'There is nothing',
+		id: '24',
+	},
+	{
+		title: 'Learning Chinese',
+		id: '35',
+	},
+].map(x => x.title)
+ .map(x => console.log(x))
+
 
 ```
 
@@ -70,9 +73,10 @@ let authors = [
 // let's assume these data has sorted by back-end, all we need is to mix these two array by order
 
 articles.reduce((accumulator, element, index) => {
-    accumulator[index].name = authors[index].name
-    return accumulator
+	accumulator[index].name = authors[index].name
+	return accumulator
 }, authors)
+
 ```
 
 In this case, it doesn't look like FP, especially when it involves `index`.  You can also archieve this by using `map` or `for... of`. In my imagenation, a proper syntax would be like `array1.mix(callbackHandler, array2, array3, ....)`.
