@@ -31,6 +31,17 @@ let publishers = [
 
 articles.mix((article, author) => ({ ...article, ...author }), authors)
 
+// return :
+// [
+//   {
+// 	    titile: 'There is nothing',
+// 	    id: '24',
+// 	    name: 'Tom'
+//   },
+//   ...
+// ]
+
+
 ```
 
 ## Motivation

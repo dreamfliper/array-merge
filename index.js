@@ -8,3 +8,7 @@ Array.prototype.mix = function(callback, ...otherArrays) {
 	}
 	return result
 }
+
+[
+	
+]
