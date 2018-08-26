@@ -1,22 +1,7 @@
 import test from "ava"
-import currify from "./currify"
-import "."
+import "./arrayMix"
 import "./arrayDiff"
 import "./arrayPartition"
-
-test("currify iteration old way", t => {
-	let args = []
-	const old_argument = [2, 3, 5]
-	const new_argument = [3, 2, 7, 3, 6]
-	for (let i = 0, l = new_argument.length; i < l; i++)
-		args[args.length] = new_argument[i]
-	t.deepEqual(args, new_argument)
-})
-
-test("currify", t => {
-	const add = currify((a, b, c, d) => a + b + c + d)
-	t.is(add(1)(2)(3)(4), 10)
-})
 
 test("array-mix", t => {
 	const array1 = [3, 4, 5]
